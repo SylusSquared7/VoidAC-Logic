@@ -1,0 +1,40 @@
+name: VoidACLogic
+version: '${project.version}'
+main: com.sylus.voidaclogic.VoidACLogic
+api-version: 1.19
+
+permissions:
+  punish.punishPlayers:
+    description: allows the player to use the punish command
+    default: false
+  punish.unbanPlayers:
+    description: allows the player to unban other players
+    default: false
+  punish.freezePlayers:
+    description: allows the player to use the /freeze command
+    default: false
+  staff.staffChat:
+    description: allows the player to see staff chat
+    default: false
+
+commands:
+  punish:
+    usage: /punish <player>
+    aliases: /pun
+    description: This command opes a GUI to punish the specified player
+    permission: punish.punishPlayers
+  unban:
+    usage: /unban <player>
+    aliases: /uban
+    description: This command unbans the specified player
+    permission: punish.unbanPlayers
+  freeze:
+    usage: /freeze <player>
+    aliases: /frz
+    description: This command freezes the specified player
+    permission: punish.freezePlayers
+  punishMenu:
+    usage: /punishMenu
+    aliases: /pm
+    description: This command brings up a testing menu
+
